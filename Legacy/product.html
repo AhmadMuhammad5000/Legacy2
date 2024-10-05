@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all product al-hamdaz store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="">
+
+    <script src="new.js"></script>
+</head>
+
+<body>
+    <!-- placeholders -->
+    <div class="small-container cart-page" id="small-container" style="display: none;"></div>
+    <div class="col-2" style="display: none;"></div>
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="work/download-removebg-preview.png" alt="126px">
+                </div>
+                <nav>
+                    <ul id="menu-icon">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">account</a></li>
+                    </ul>
+                </nav>
+                <img src="work/Cart6_-removebg-preview.png" width="30px" height="30px">
+                <img src="work/Menu_bar_-removebg-preview.png" class="menu-icon" onclick="menutoggle()" alt="menu">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>All Product</h2>
+            <select>
+                <option>Default shorting</option>
+                <option>Short by pirice</option>
+                <option>Short by popularity</option>
+                <option>Short by rating</option>
+                <option>Short by sale</option>
+
+            </select>
+        </div>
+        <div class="row" id="row">
+            <!-- CONTENTS ARE DYNAMICALLY RENDER USING JAVASCRIPT -->
+        </div>
+
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#10152;</span>
+
+
+        </div>
+
+    </div>
+
+    <!------footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="work/App_store_-removebg-preview.png">
+                        <img src="work/Play_store1_-removebg-preview.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="work/download-removebg-preview.png">
+                    <p>Our Purpose is to sustainably Make the Pleasure and
+                        benefit of Sport accesible to the many
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3> Useful link</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Joint Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3> Follow us on:</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Whatsapp</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">copyright 2024 - Al-hamdaz</p>
+        </div>
+    </div>
+
+    <!-------js for menu toggle-->
+
+    <script>
+        var MenuItems = document.getElementById("menu-icon");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- SCRIPT TO LOAD THE PRODUCTS -->
+    <script src="js/dist/sql-wasm-debug.js"></script>
+    <script src="js/db.js"></script>
+
+</body>
+
+</html>
